@@ -1,137 +1,625 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>zhucyi&#39;s</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="index                 0">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhucyi&#39;s">
-<meta property="og:url" content="http://yoursite.com/resume/index.html">
-<meta property="og:site_name" content="zhucyi&#39;s">
-<meta property="og:description" content="index                 0">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-10T09:59:01.986Z">
-<meta property="article:modified_time" content="2020-07-10T09:59:01.985Z">
-<meta property="article:author" content="zhucyi">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternative" href="/atom.xml" title="zhucyi&#39;s" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-<link rel="stylesheet" href="/css/style.css">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>朱超逸</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
 
-  
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
 
-<meta name="generator" content="Hexo 4.2.1"></head>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <div class="outer">
-        <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
-  
-  <div class="article-inner">
-    
-    <div class="article-meta">
-      <a href="/resume/index.html" class="article-date">
-  <time datetime="2020-07-10T09:59:01.986Z" itemprop="datePublished">2020-07-10</time>
-</a>
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html>
-<html>
-  <head>
-    <title>index</title>
-    <meta
-      name="viewport"
-      content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
-    />
-  <link href="main.css" rel="stylesheet"><meta name="generator" content="Hexo 4.2.1"></head>
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
 
-  <body>
-    <p id="score">0</p>
-    <canvas id="can"></canvas>
-  <script type="text/javascript" src="main.js"></script></body>
-</html>
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
 
-      
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
 
-      
-        
-    </div>
-  </div>
-  
-    
-  
-</article>
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
 
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
 
-</section>
-        <aside id="sidebar">
-  <nav class="menus">
-  	<ul>
-  		<li><a href="/"><i class="icon icon-home"></i></a></li>
-  		
-			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
-  		
-  		
-  		
-			<li><a href="/resume"><i class="icon icon-tag"></i></a></li>
-  		
-  		
-  			<li><a href="https://github.com/zhucyi" target="_blank"><i class="icon icon-github"></i></a></li>
-  		
-  	</ul>
-  </nav>
-  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
-</aside>
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
 
-      </div>
-      <footer id="footer">
-  
-	<div id="footer-info" class="inner">
-	  &copy; 2020 zhucyi 
-	</div>
-</footer>
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="https://github.com/zhucyi" target="_blank" rel="noopener" class="mobile-nav-link">Github</a>
-  
-    <a href="/resume" class="mobile-nav-link">Resume</a>
-  
-    <a href="/play" class="mobile-nav-link">Play</a>
-  
-</nav>
-    
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
 
-<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
 
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
 
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
 
+mark {
+	background-color: transparent;
+}
 
+.indented {
+	padding-left: 1.5em;
+}
 
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
 
-<script src="/js/script.js"></script>
+img {
+	max-width: 100%;
+}
 
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
 
-  </div>
-</body>
-</html>
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><meta name="generator" content="Hexo 4.2.1"></head><body><article id="76643a7c-ab2b-48c5-93b8-990c8740cc2c" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/woodcuts_1.jpg" style="object-position:center 90%"/><h1 class="page-title">朱超逸</h1></header><div class="page-body"><blockquote id="707cd942-5344-49a9-8f6d-d27807299321" class="">团队快乐源泉，努力前端er</blockquote><h1 id="95db232a-e59e-420d-af44-383cb1313f65" class="">基本信息</h1><p id="5ea6f4c9-e57d-4e8a-8f2e-daee692f7480" class="">手机：17625931797                         邮箱：2501743945@qq.com</p><p id="fb5015a9-f69a-4b7c-b5d8-fcd6e1b9ed8f" class="">学校：南京师范大学                        学历：本科 </p><p id="2b4423d9-ac3d-4e53-9a0c-8b966d00ba53" class="">毕业时间：2017.7                              工作经验：3年</p><p id="ca44c995-9243-4fbb-a90a-b0633504d587" class="">某hub：<a href="https://github.com/zhucyi" target="_blank" rel="noopener">https://github.com/zhucyi</a></p><hr id="b66c8f14-cc13-4963-ade8-ae7a81050ba9"/><h1 id="6bcaabd3-80d5-420c-a372-fb2099862930" class="">技能点</h1><p id="3cab06b2-8e55-4352-a7a4-c283e54aa553" class="">基本功 html/css/js，扎实</p><p id="19c1c34c-6b30-4670-a809-b60ade3ec5ab" class="">框架vue全家桶了解甚多，react使用频率不高，jquery、zepto老早用的不少，稀奇古怪的require、snap等入土框架也有涉及</p><p id="9c871af5-66a3-49b1-83de-565edefda492" class="">自动化构建webpack，还行</p><p id="7f271d33-7851-4641-86cd-a419e6b6f859" class="">服务端技术node&amp;java，有涉猎</p><p id="e1b75401-1cf5-4c9a-87c8-5d594b55175a" class="">
+</p><hr id="1df6bf1a-51ca-4078-9d46-a8c97ad61fcd"/><h1 id="771d4bd6-b70b-49dc-8667-009ced7e6027" class="">工作经历</h1><h3 id="5146ce19-1202-404e-9398-41b4e7b65892" class="">前端工程师</h3><p id="2ff00196-ce72-4aec-81ef-d653ee260f0e" class="block-color-gray">小米<em>, 2018.12-至今，1年7个月</em></p><p id="c1de020f-f7dc-4831-a9d2-a91819842b97" class="">主导内部多个b端系统重构，承担c端产品包括搜索和homefeed的sug+结果页面，后期主要跟进小米浏览器sug页面项目开发。负责组内项目版本管理和进度控制，参与工作流程管理，人员安排。</p><h3 id="b258a5d0-a6b5-4b4e-88d9-510a41f89781" class="">前端工程师</h3><p id="4b0867c3-88f0-43be-8347-38ec519601d1" class="block-color-gray">苏宁<em>, 2018.7-2018.11，5个月</em></p><p id="280f2090-ef46-4a8f-a614-720fac281696" class="">参与内部画像分析系统开发，后期带外聘人员负责c端云钻产品开发。</p><h3 id="4dd1ce14-bb88-40f1-a110-0b768cdd3ad9" class="">软件工程师(实习java,前端)</h3><p id="d06660ff-7b17-4600-89df-e1e060e61a2d" class="block-color-gray">华宇信息<em>, 2016.11-2017.7-2018.6，1年8个月</em></p><p id="e3102248-e0bb-4221-b929-c0d656a987b0" class="">应届实习期参与前后端混合开发，毕业后负责前端项目开发工作，之后额外承担同批应届生项目计划制定与工作量评估与排期。</p><hr id="ee8dd554-2249-4c56-9a01-f41346db5cb5"/><h1 id="165e3f90-3de2-4b25-afed-4440baa9ad64" class="">项目经历</h1><blockquote id="5ac8f385-d5be-471d-9c39-3cd1357f7c16" class="">省略一些同质化项目，挑几个里程碑意义的项目</blockquote><h3 id="ae11ece2-2559-46d8-a5bd-ccee04ca4a03" class="">苏州政法协同(内网项目)</h3><p id="d71de02e-1633-4194-8553-33090a92760a" class="block-color-gray">技术栈：jquery，require，jquery，snap</p><p id="af7411b2-db72-40cf-b21f-7f91da820465" class="">项目采用require的AMD方式加载，jquery封装组件，页面手写，通过dom操作进行交互，页面拆分通过拆分html进行，存在iframe，通过postMessage方式进行交互，采用各种乱七八糟手段兼容iframe在页面中的样式。</p><h3 id="abfb222f-c193-4d8d-a385-44fb5c8a5ed4" class="">江西执行管理(内网项目)</h3><p id="7245a07d-5d57-4296-8705-bdbd8ea92d4a" class="block-color-gray">技术栈：require，vue，vue-router，eventbus，snap，echarts</p><p id="186c56ed-9c61-4b6f-a57d-df2aa69c7845" class="">项目采用require+vue进行构建开发，复杂组件间通信通过eventbus进行，通过vue-router使用hashrouter进行模块拆分，页面属于数据可视化类型，使用echarts进行各种图表配置。存在一些定制化地图+图表，使用snap进行手动绘制并控制交互。</p><h3 id="6bbc08c6-4a53-4464-9767-3e8f27c265fe" class="">金矿项目(b端门店画像管理系统)</h3><p id="8d466840-9b53-45c6-98ca-b2974d624b4d" class="block-color-gray">技术栈：webpack+vue全家桶+egg+伪ssr</p><p id="217ec26c-6223-464c-b762-23035dcfcb74" class="">老项目改造而来，vue-cli create的项目，正常业务逻辑，使用egg写回html，并充当中间层转发后台请求。</p><h3 id="abcdb99b-24f8-4e06-bbbe-c235c1e23167" class="">云钻系列(苏宁app个人信息中各种活动页面)</h3><p id="a3eea8db-510b-4d4f-926c-8cfc636b02ec" class="block-color-gray">技术栈：webpack+art-template+zepto</p><p id="f413018c-397a-42a3-a63f-2f61de3dfb5e" class="">地址：<a href="https://sign.suning.com/sign-web/m/newsign/to/index.do" target="_blank" rel="noopener">https://sign.suning.com/sign-web/m/newsign/to/index.do</a></p><p id="4020ec36-1512-4b7a-b79b-7b476068a110" class="">各种会员活动页面，旧项目居然同时使用jq和zepto，将jq进行剔除，完成新版需求开发。进行页面加载弱网情况优化。</p><h3 id="a32d12b0-8360-470f-b016-58af3c85520f" class="">开放/实验平台(重构性b端系统)</h3><p id="89c07889-2b67-40ba-8412-ef2f12316113" class="block-color-gray">技术栈：webpack+vue全家桶+typescript+elementUI</p><p id="c2629972-6522-453e-a1d9-25a3e7aa0d73" class="">B端项目，业务堆积类项目，主要复杂度在于业务数据处理。</p><h3 id="d1869c9f-212a-4829-88ab-fa39a90aea27" class="">部门组件库</h3><p id="cb4eb143-d6ce-4177-a55d-87daae02ede5" class="block-color-gray">技术栈：vuecli3，jest，commitizen，typescript，ls-lint</p><p id="1bbf2e30-23ab-4fde-984c-df421e2da948" class="">业务需要，c端多项目需要抽离公共组件和业务组件，主推进行部门项目组件库建设，基本参考elementUI进行开发。vuecli3搭建，接入jest单元测试。使用ts进行开发，通过lint-stage配置ls-lint、prettier和tslint进行代码风格控制，使用scss mixin控制组件样式命名空间，移动端样式使用rem进行兼容。组件文档产出通过vuepress进行维护</p><h3 id="11c785c6-d1da-4cae-ad16-cf09c4fa3744" class="">c端项目(浏览器/全搜/信息流)</h3><p id="70d46136-1131-45fc-9319-eab70532d47a" class="block-color-gray">技术栈：vuecli3，typescript，ls-lint，axios，intersection-observer</p><p id="0c528313-4adb-48c0-9b0b-29efb62f93a8" class="">客户端搜索sug和结果页面，以卡片为粒度进行开发，较为简单。主要是建立了比较完整的半侵入式打点系统。曝光intersection-observer进行监控采样打点上报。组件内通过vue directive进行侵入式dom元素绑定打点。</p><p id="224b2f9e-9c48-4df0-aa10-316935632215" class="">
+</p><p id="1476fa12-d219-4e85-a0bf-d83c3f15b4b5" class="">
+</p><hr id="3bcaea50-c213-4393-92ed-c208890e635e"/></div></article></body></html>
