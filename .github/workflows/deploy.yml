@@ -56,8 +56,6 @@ jobs:
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         run: |
-          git config --global user.email "2501743945@qq.com"
-          git config --global user.name "zhucyi"
           sudo timedatectl set-timezone "Asia/Shanghai"
           mkdir -p ~/.ssh
           echo "$DEPLOY_KEY" > ~/.ssh/id_rsa

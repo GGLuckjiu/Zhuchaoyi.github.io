@@ -101,7 +101,7 @@ theme: jane
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
     type: git
-    repo: https://github.com/zhucyi/zhucyi.github.io.git
+    repo: git@github.com:zhucyi/zhucyi.github.io.git
     branch: master
-    # name: zhucyi
-    # email: 2501743945@qq.com
+    name: zhucyi
+    email: 2501743945@qq.com
