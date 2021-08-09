@@ -1,630 +1,639 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>朱超逸</title><style>
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
+	/* cspell:disable-file */
+	/* webkit printing magic: print all background colors */
+	html {
+		-webkit-print-color-adjust: exact;
 	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
+	* {
+		box-sizing: border-box;
+		-webkit-print-color-adjust: exact;
 	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	text-indent: -1.7em;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
-
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
-
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
-
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
-
-.highlight-default {
-}
-.highlight-gray {
-	color: rgb(155,154,151);
-}
-.highlight-brown {
-	color: rgb(100,71,58);
-}
-.highlight-orange {
-	color: rgb(217,115,13);
-}
-.highlight-yellow {
-	color: rgb(223,171,1);
-}
-.highlight-teal {
-	color: rgb(15,123,108);
-}
-.highlight-blue {
-	color: rgb(11,110,153);
-}
-.highlight-purple {
-	color: rgb(105,64,165);
-}
-.highlight-pink {
-	color: rgb(173,26,114);
-}
-.highlight-red {
-	color: rgb(224,62,62);
-}
-.highlight-gray_background {
-	background: rgb(235,236,237);
-}
-.highlight-brown_background {
-	background: rgb(233,229,227);
-}
-.highlight-orange_background {
-	background: rgb(250,235,221);
-}
-.highlight-yellow_background {
-	background: rgb(251,243,219);
-}
-.highlight-teal_background {
-	background: rgb(221,237,234);
-}
-.highlight-blue_background {
-	background: rgb(221,235,241);
-}
-.highlight-purple_background {
-	background: rgb(234,228,242);
-}
-.highlight-pink_background {
-	background: rgb(244,223,235);
-}
-.highlight-red_background {
-	background: rgb(251,228,228);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(55, 53, 47, 0.6);
-	fill: rgba(55, 53, 47, 0.6);
-}
-.block-color-brown {
-	color: rgb(100,71,58);
-	fill: rgb(100,71,58);
-}
-.block-color-orange {
-	color: rgb(217,115,13);
-	fill: rgb(217,115,13);
-}
-.block-color-yellow {
-	color: rgb(223,171,1);
-	fill: rgb(223,171,1);
-}
-.block-color-teal {
-	color: rgb(15,123,108);
-	fill: rgb(15,123,108);
-}
-.block-color-blue {
-	color: rgb(11,110,153);
-	fill: rgb(11,110,153);
-}
-.block-color-purple {
-	color: rgb(105,64,165);
-	fill: rgb(105,64,165);
-}
-.block-color-pink {
-	color: rgb(173,26,114);
-	fill: rgb(173,26,114);
-}
-.block-color-red {
-	color: rgb(224,62,62);
-	fill: rgb(224,62,62);
-}
-.block-color-gray_background {
-	background: rgb(235,236,237);
-}
-.block-color-brown_background {
-	background: rgb(233,229,227);
-}
-.block-color-orange_background {
-	background: rgb(250,235,221);
-}
-.block-color-yellow_background {
-	background: rgb(251,243,219);
-}
-.block-color-teal_background {
-	background: rgb(221,237,234);
-}
-.block-color-blue_background {
-	background: rgb(221,235,241);
-}
-.block-color-purple_background {
-	background: rgb(234,228,242);
-}
-.block-color-pink_background {
-	background: rgb(244,223,235);
-}
-.block-color-red_background {
-	background: rgb(251,228,228);
-}
-.select-value-color-default { background-color: rgba(206,205,202,0.5); }
-.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
-.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
-.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
-.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
-.select-value-color-green { background-color: rgba(0,135,107,0.2); }
-.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
-.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
-.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
-.select-value-color-red { background-color: rgba(255,0,26,0.2); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
 	
-</style></head><body><article id="76643a7c-ab2b-48c5-93b8-990c8740cc2c" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/woodcuts_1.jpg" style="object-position:center 90%"/><h1 class="page-title">朱超逸</h1></header><div class="page-body"><blockquote id="707cd942-5344-49a9-8f6d-d27807299321" class="">努力前端er</blockquote><h1 id="95db232a-e59e-420d-af44-383cb1313f65" class="">基本信息</h1><p id="5ea6f4c9-e57d-4e8a-8f2e-daee692f7480" class="">手机：15651886138 </p><p id="fcca7f35-7e9e-4166-b3dd-7d532c13a83c" class="">邮箱：2501743945@qq.com</p><p id="fb5015a9-f69a-4b7c-b5d8-fcd6e1b9ed8f" class="">学校：南京师范大学 </p><p id="2f9d299f-d6b5-4222-ae28-d1a3396964a9" class="">学历：本科 </p><p id="2b4423d9-ac3d-4e53-9a0c-8b966d00ba53" class="">毕业时间：2017.7</p><p id="41985452-eade-4d0e-b8cd-791ec44d1388" class="">工作经验：3年</p><p id="ca44c995-9243-4fbb-a90a-b0633504d587" class="">某hub：<a href="https://github.com/zhucyi">https://github.com/zhucyi</a></p><hr id="b66c8f14-cc13-4963-ade8-ae7a81050ba9"/><h1 id="6bcaabd3-80d5-420c-a372-fb2099862930" class="">技能点</h1><p id="3cab06b2-8e55-4352-a7a4-c283e54aa553" class="">基本功 html/css/js，扎实</p><p id="19c1c34c-6b30-4670-a809-b60ade3ec5ab" class="">框架vue全家桶了解甚多，react使用频率不高，jquery、zepto老早用的不少，稀奇古怪的require、snap等入土框架也有涉及</p><p id="9c871af5-66a3-49b1-83de-565edefda492" class="">自动化构建webpack，还行</p><p id="7f271d33-7851-4641-86cd-a419e6b6f859" class="">服务端技术node&amp;java，有涉猎</p><hr id="1df6bf1a-51ca-4078-9d46-a8c97ad61fcd"/><h1 id="771d4bd6-b70b-49dc-8667-009ced7e6027" class="">工作与项目经历</h1><h2 id="5146ce19-1202-404e-9398-41b4e7b65892" class="">小米</h2><p id="2ff00196-ce72-4aec-81ef-d653ee260f0e" class="block-color-gray"><strong>前端工程师</strong><em>, 2018.12-至今</em></p><p id="c1de020f-f7dc-4831-a9d2-a91819842b97" class="">主导多个b端系统重构，承担c端产品包括搜索和信息流的sug+结果页面，后期主要跟进小米浏览器sug方向。推动组内研发版本化进度，控制项目进度，参与工作流程管理和人员安排。</p><h3 id="95afacf9-2f25-4956-90a0-def361183981" class="">参与项目：</h3><ul id="a32d12b0-8360-470f-b016-58af3c85520f" class="toggle"><li><details open=""><summary><strong>开放/实验平台(重构性B端系统)</strong></summary><p id="89c07889-2b67-40ba-8412-ef2f12316113" class="block-color-gray"><strong>技术栈：</strong>webpack+vue全家桶+typescript+elementUI</p><p id="c2629972-6522-453e-a1d9-25a3e7aa0d73" class=""><strong>描述：</strong>B端项目，主要为产品运营提供线上功能配置，业务功能和数据处理比较复杂。</p><p id="a929a7c6-271e-4252-9a45-ebc95b538938" class=""><strong>主要职责：</strong>提出并推进项目重构，确定重构方案，分期分模块对项目进行迁移，负责项目架构工作并完成了所有重构功能。</p></details></li></ul><ul id="d1869c9f-212a-4829-88ab-fa39a90aea27" class="toggle"><li><details open=""><summary><strong>部门组件库</strong></summary><p id="cb4eb143-d6ce-4177-a55d-87daae02ede5" class="block-color-gray"><strong>技术栈：</strong>vuecli3，jest，commitizen，typescript，ls-lint</p><p id="1bbf2e30-23ab-4fde-984c-df421e2da948" class=""><strong>描述：</strong>因为业务需要，c端多项目需要抽离公共组件和业务组件，主推进行部门项目组件库建设，参考elementUI进行开发。vuecli3搭建，接入jest单元测试。使用typescript，通过lint-stage配置ls-lint、prettier和tslint进行代码风格控制，使用scss mixin控制组件样式命名空间，移动端样式使用rem进行兼容。组件文档产出通过vuepress进行维护。</p><p id="c97043b8-806c-4cc9-b02a-fda7977183b2" class=""><strong>主要职责：</strong>确定组件库采用的框架和对应的引入方式，对公共基础组件进行抽象并放入组件库。</p></details></li></ul><ul id="11c785c6-d1da-4cae-ad16-cf09c4fa3744" class="toggle"><li><details open=""><summary><strong>c端项目(浏览器/全搜/信息流)</strong></summary><p id="70d46136-1131-45fc-9319-eab70532d47a" class="block-color-gray"><strong>技术栈：</strong>vuecli3，typescript，ls-lint，axios，intersection-observer</p><p id="0c528313-4adb-48c0-9b0b-29efb62f93a8" class=""><strong>描述：</strong>客户端内嵌h5项目，主要是搜索sug和结果页面，以卡片为粒度进行开发。通过JSBridge从客户端拉数据。建立了比较完整的半侵入式打点系统。曝光intersection-observer进行监控采样打点上报。组件内通过directive进行侵入式的绑定打点。</p><p id="1b322b4c-ab70-459d-ba48-6b74e27e7c7e" class=""><strong>主要职责：</strong>负责一系列卡片内容的研发并指导新人熟悉开发对应的功能模块，在项目中引入各种lint来完善项目规范。</p></details></li></ul><hr id="c92ba53f-be17-4f88-ae13-d3a339e116f8"/><h2 id="b258a5d0-a6b5-4b4e-88d9-510a41f89781" class="">苏宁</h2><p id="4b0867c3-88f0-43be-8347-38ec519601d1" class="block-color-gray"><strong>前端工程师</strong><em>, 2018.7-2018.11，5个月</em></p><p id="280f2090-ef46-4a8f-a614-720fac281696" class="">参与内部画像分析系统开发，后期带外聘人员负责c端云钻产品开发。</p><h3 id="3305b2bd-604b-4f10-ac7d-8668ad34ddf9" class="">参与项目：</h3><ul id="abcdb99b-24f8-4e06-bbbe-c235c1e23167" class="toggle"><li><details open=""><summary><strong>云钻系列(苏宁app个人信息中各种活动页面)</strong></summary><p id="a3eea8db-510b-4d4f-926c-8cfc636b02ec" class="block-color-gray"><strong>技术栈：</strong>webpack+art-template+zepto</p><p id="f413018c-397a-42a3-a63f-2f61de3dfb5e" class=""><strong>地址：</strong><a href="https://sign.suning.com/sign-web/m/newsign/to/index.do">https://sign.suning.com/sign-web/m/newsign/to/index.do</a></p><p id="4020ec36-1512-4b7a-b79b-7b476068a110" class=""><strong>描述：</strong>多种会员活动页面，旧项目居然同时使用jq和zepto，将jq进行剔除，完成新版需求开发。进行页面加载弱网情况优化。</p><p id="cf02cbbc-90b9-4d99-b149-f453c165b4db" class=""><strong>主要职责：</strong>负责项目需求的跟进、分工和开发，带领外聘同学合作开发项目。</p></details></li></ul><ul id="6bbc08c6-4a53-4464-9767-3e8f27c265fe" class="toggle"><li><details open=""><summary><strong>金矿项目(B端门店画像管理系统)</strong></summary><p id="8d466840-9b53-45c6-98ca-b2974d624b4d" class="block-color-gray"><strong>技术栈：</strong>webpack+vue全家桶+koa+echarts</p><p id="217ec26c-6223-464c-b762-23035dcfcb74" class=""><strong>描述：</strong>为制定门店发展方向而统计并展示每个苏宁门店的用户流量，消费金额等业务属性，vue-cli create的项目，伪ssr，koa直接写回的打包出的html，并充当中间层转发后台请求。</p><p id="88754724-2b44-4c05-a63d-4596e81b7f58" class=""><strong>主要职责：</strong>跟进版本需求，对接后台开发对应的功能模块。</p></details></li></ul><hr id="ee8dd554-2249-4c56-9a01-f41346db5cb5"/><h2 id="4dd1ce14-bb88-40f1-a110-0b768cdd3ad9" class="">华宇软件</h2><p id="d06660ff-7b17-4600-89df-e1e060e61a2d" class="block-color-gray"><strong>软件工程师</strong>(实习java,前端)<em>, 2016.11-2017.7-2018.6，1年8个月</em></p><p id="e3102248-e0bb-4221-b929-c0d656a987b0" class="">应届实习期参与前后端混合开发，毕业后负责前端项目开发工作，之后额外承担同批应届生项目计划制定与工作量评估与排期。</p><h3 id="8b11f21c-747a-46ae-9cbc-cff48ab64862" class="">参与项目：</h3><ul id="abfb222f-c193-4d8d-a385-44fb5c8a5ed4" class="toggle"><li><details open=""><summary><strong>江西执行管理(内网项目)</strong></summary><p id="7245a07d-5d57-4296-8705-bdbd8ea92d4a" class="block-color-gray"><strong>技术栈：</strong>require，vue，vue-router，snap，echarts</p><p id="186c56ed-9c61-4b6f-a57d-df2aa69c7845" class=""><strong>描述：</strong>采用require引入vue的完整包，渐进式开发。复杂组件间通信通过eventbus进行，用vue-router 的hash模式进行路由拆分。系统属于数据可视化类型，使用echarts进行各种图表配置。存在一些定制化地图+图表，使用snap进行手动绘制并控制交互。</p><p id="93529672-504e-488a-ab28-6118f4087f10" class=""><strong>主要职责：</strong>项目负责人，主导开发并首次引入vue以及相关生态包，探索对应的实践。</p></details></li></ul><ul id="ae11ece2-2559-46d8-a5bd-ccee04ca4a03" class="toggle"><li><details open=""><summary><strong>苏州政法协同(内网项目)</strong></summary><p id="d71de02e-1633-4194-8553-33090a92760a" class="block-color-gray"><strong>技术栈：</strong>jquery，require，snap</p><p id="af7411b2-db72-40cf-b21f-7f91da820465" class=""><strong>描述：</strong>采用AMD方式加载模块，jquery封装组件，页面手写，通过dom操作进行交互，页面结构通过拆分html进行区分。解决最多问题就是iframe之间通信（postMessage方式进行），iframe嵌入html后的滚动样式问题（100%撑满跟随视口变化）。</p><p id="caa8e162-e2f9-4e71-a8ea-4a4e097eaee5" class=""><strong>主要职责：</strong>独立完成项目的搭建，开发工作。</p><p id="0c4ed066-fc40-4fd7-b0a9-831ecb362b84" class="">
-</p></details></li></ul><p id="2741f557-2145-4972-a1bb-d414473c6d7d" class="">
-</p><p id="1d37dcbc-0f3c-4fd7-b84b-c3c57e58be27" class="">
-</p></div></article></body></html>
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	@media only screen {
+		body {
+			margin: 2em auto;
+			max-width: 900px;
+			color: rgb(55, 53, 47);
+		}
+	}
+	
+	body {
+		line-height: 1.5;
+		white-space: pre-wrap;
+	}
+	
+	a,
+	a.visited {
+		color: inherit;
+		text-decoration: underline;
+	}
+	
+	.pdf-relative-link-path {
+		font-size: 80%;
+		color: #444;
+	}
+	
+	h1,
+	h2,
+	h3 {
+		letter-spacing: -0.01em;
+		line-height: 1.2;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+	
+	.page-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-top: 0;
+		margin-bottom: 0.75em;
+	}
+	
+	h1 {
+		font-size: 1.875rem;
+		margin-top: 1.875rem;
+	}
+	
+	h2 {
+		font-size: 1.5rem;
+		margin-top: 1.5rem;
+	}
+	
+	h3 {
+		font-size: 1.25rem;
+		margin-top: 1.25rem;
+	}
+	
+	.source {
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		padding: 1.5em;
+		word-break: break-all;
+	}
+	
+	.callout {
+		border-radius: 3px;
+		padding: 1rem;
+	}
+	
+	figure {
+		margin: 1.25em 0;
+		page-break-inside: avoid;
+	}
+	
+	figcaption {
+		opacity: 0.5;
+		font-size: 85%;
+		margin-top: 0.5em;
+	}
+	
+	mark {
+		background-color: transparent;
+	}
+	
+	.indented {
+		padding-left: 1.5em;
+	}
+	
+	hr {
+		background: transparent;
+		display: block;
+		width: 100%;
+		height: 1px;
+		visibility: visible;
+		border: none;
+		border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+	}
+	
+	img {
+		max-width: 100%;
+	}
+	
+	@media only print {
+		img {
+			max-height: 100vh;
+			object-fit: contain;
+		}
+	}
+	
+	@page {
+		margin: 1in;
+	}
+	
+	.collection-content {
+		font-size: 0.875rem;
+	}
+	
+	.column-list {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.column {
+		padding: 0 1em;
+	}
+	
+	.column:first-child {
+		padding-left: 0;
+	}
+	
+	.column:last-child {
+		padding-right: 0;
+	}
+	
+	.table_of_contents-item {
+		display: block;
+		font-size: 0.875rem;
+		line-height: 1.3;
+		padding: 0.125rem;
+	}
+	
+	.table_of_contents-indent-1 {
+		margin-left: 1.5rem;
+	}
+	
+	.table_of_contents-indent-2 {
+		margin-left: 3rem;
+	}
+	
+	.table_of_contents-indent-3 {
+		margin-left: 4.5rem;
+	}
+	
+	.table_of_contents-link {
+		text-decoration: none;
+		opacity: 0.7;
+		border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+	}
+	
+	table,
+	th,
+	td {
+		border: 1px solid rgba(55, 53, 47, 0.09);
+		border-collapse: collapse;
+	}
+	
+	table {
+		border-left: none;
+		border-right: none;
+	}
+	
+	th,
+	td {
+		font-weight: normal;
+		padding: 0.25em 0.5em;
+		line-height: 1.5;
+		min-height: 1.5em;
+		text-align: left;
+	}
+	
+	th {
+		color: rgba(55, 53, 47, 0.6);
+	}
+	
+	ol,
+	ul {
+		margin: 0;
+		margin-block-start: 0.6em;
+		margin-block-end: 0.6em;
+	}
+	
+	li > ol:first-child,
+	li > ul:first-child {
+		margin-block-start: 0.6em;
+	}
+	
+	ul > li {
+		list-style: disc;
+	}
+	
+	ul.to-do-list {
+		text-indent: -1.7em;
+	}
+	
+	ul.to-do-list > li {
+		list-style: none;
+	}
+	
+	.to-do-children-checked {
+		text-decoration: line-through;
+		opacity: 0.375;
+	}
+	
+	ul.toggle > li {
+		list-style: none;
+	}
+	
+	ul {
+		padding-inline-start: 1.7em;
+	}
+	
+	ul > li {
+		padding-left: 0.1em;
+	}
+	
+	ol {
+		padding-inline-start: 1.6em;
+	}
+	
+	ol > li {
+		padding-left: 0.2em;
+	}
+	
+	.mono ol {
+		padding-inline-start: 2em;
+	}
+	
+	.mono ol > li {
+		text-indent: -0.4em;
+	}
+	
+	.toggle {
+		padding-inline-start: 0em;
+		list-style-type: none;
+	}
+	
+	/* Indent toggle children */
+	.toggle > li > details {
+		padding-left: 1.7em;
+	}
+	
+	.toggle > li > details > summary {
+		margin-left: -1.1em;
+	}
+	
+	.selected-value {
+		display: inline-block;
+		padding: 0 0.5em;
+		background: rgba(206, 205, 202, 0.5);
+		border-radius: 3px;
+		margin-right: 0.5em;
+		margin-top: 0.3em;
+		margin-bottom: 0.3em;
+		white-space: nowrap;
+	}
+	
+	.collection-title {
+		display: inline-block;
+		margin-right: 1em;
+	}
+	
+	time {
+		opacity: 0.5;
+	}
+	
+	.icon {
+		display: inline-block;
+		max-width: 1.2em;
+		max-height: 1.2em;
+		text-decoration: none;
+		vertical-align: text-bottom;
+		margin-right: 0.5em;
+	}
+	
+	img.icon {
+		border-radius: 3px;
+	}
+	
+	.user-icon {
+		width: 1.5em;
+		height: 1.5em;
+		border-radius: 100%;
+		margin-right: 0.5rem;
+	}
+	
+	.user-icon-inner {
+		font-size: 0.8em;
+	}
+	
+	.text-icon {
+		border: 1px solid #000;
+		text-align: center;
+	}
+	
+	.page-cover-image {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		height: 30vh;
+	}
+	
+	.page-header-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+	
+	.page-header-icon-with-cover {
+		margin-top: -0.72em;
+		margin-left: 0.07em;
+	}
+	
+	.page-header-icon img {
+		border-radius: 3px;
+	}
+	
+	.link-to-page {
+		margin: 1em 0;
+		padding: 0;
+		border: none;
+		font-weight: 500;
+	}
+	
+	p > .user {
+		opacity: 0.5;
+	}
+	
+	td > .user,
+	td > time {
+		white-space: nowrap;
+	}
+	
+	input[type="checkbox"] {
+		transform: scale(1.5);
+		margin-right: 0.6em;
+		vertical-align: middle;
+	}
+	
+	p {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+	
+	.image {
+		border: none;
+		margin: 1.5em 0;
+		padding: 0;
+		border-radius: 0;
+		text-align: center;
+	}
+	
+	.code,
+	code {
+		background: rgba(135, 131, 120, 0.15);
+		border-radius: 3px;
+		padding: 0.2em 0.4em;
+		border-radius: 3px;
+		font-size: 85%;
+		tab-size: 2;
+	}
+	
+	code {
+		color: #eb5757;
+	}
+	
+	.code {
+		padding: 1.5em 1em;
+	}
+	
+	.code-wrap {
+		white-space: pre-wrap;
+		word-break: break-all;
+	}
+	
+	.code > code {
+		background: none;
+		padding: 0;
+		font-size: 100%;
+		color: inherit;
+	}
+	
+	blockquote {
+		font-size: 1.25em;
+		margin: 1em 0;
+		padding-left: 1em;
+		border-left: 3px solid rgb(55, 53, 47);
+	}
+	
+	.bookmark {
+		text-decoration: none;
+		max-height: 8em;
+		padding: 0;
+		display: flex;
+		width: 100%;
+		align-items: stretch;
+	}
+	
+	.bookmark-title {
+		font-size: 0.85em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		height: 1.75em;
+		white-space: nowrap;
+	}
+	
+	.bookmark-text {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.bookmark-info {
+		flex: 4 1 180px;
+		padding: 12px 14px 14px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	.bookmark-image {
+		width: 33%;
+		flex: 1 1 180px;
+		display: block;
+		position: relative;
+		object-fit: cover;
+		border-radius: 1px;
+	}
+	
+	.bookmark-description {
+		color: rgba(55, 53, 47, 0.6);
+		font-size: 0.75em;
+		overflow: hidden;
+		max-height: 4.5em;
+		word-break: break-word;
+	}
+	
+	.bookmark-href {
+		font-size: 0.75em;
+		margin-top: 0.25em;
+	}
+	
+	.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+	.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+	.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+	.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+	.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+	.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+	.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+	.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+	.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+	.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+	.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+	.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+	.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+	.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+	.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+	.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+	.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+	.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+	.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+	.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+	.highlight-default {
+	}
+	.highlight-gray {
+		color: rgb(155,154,151);
+	}
+	.highlight-brown {
+		color: rgb(100,71,58);
+	}
+	.highlight-orange {
+		color: rgb(217,115,13);
+	}
+	.highlight-yellow {
+		color: rgb(223,171,1);
+	}
+	.highlight-teal {
+		color: rgb(15,123,108);
+	}
+	.highlight-blue {
+		color: rgb(11,110,153);
+	}
+	.highlight-purple {
+		color: rgb(105,64,165);
+	}
+	.highlight-pink {
+		color: rgb(173,26,114);
+	}
+	.highlight-red {
+		color: rgb(224,62,62);
+	}
+	.highlight-gray_background {
+		background: rgb(235,236,237);
+	}
+	.highlight-brown_background {
+		background: rgb(233,229,227);
+	}
+	.highlight-orange_background {
+		background: rgb(250,235,221);
+	}
+	.highlight-yellow_background {
+		background: rgb(251,243,219);
+	}
+	.highlight-teal_background {
+		background: rgb(221,237,234);
+	}
+	.highlight-blue_background {
+		background: rgb(221,235,241);
+	}
+	.highlight-purple_background {
+		background: rgb(234,228,242);
+	}
+	.highlight-pink_background {
+		background: rgb(244,223,235);
+	}
+	.highlight-red_background {
+		background: rgb(251,228,228);
+	}
+	.block-color-default {
+		color: inherit;
+		fill: inherit;
+	}
+	.block-color-gray {
+		color: rgba(55, 53, 47, 0.6);
+		fill: rgba(55, 53, 47, 0.6);
+	}
+	.block-color-brown {
+		color: rgb(100,71,58);
+		fill: rgb(100,71,58);
+	}
+	.block-color-orange {
+		color: rgb(217,115,13);
+		fill: rgb(217,115,13);
+	}
+	.block-color-yellow {
+		color: rgb(223,171,1);
+		fill: rgb(223,171,1);
+	}
+	.block-color-teal {
+		color: rgb(15,123,108);
+		fill: rgb(15,123,108);
+	}
+	.block-color-blue {
+		color: rgb(11,110,153);
+		fill: rgb(11,110,153);
+	}
+	.block-color-purple {
+		color: rgb(105,64,165);
+		fill: rgb(105,64,165);
+	}
+	.block-color-pink {
+		color: rgb(173,26,114);
+		fill: rgb(173,26,114);
+	}
+	.block-color-red {
+		color: rgb(224,62,62);
+		fill: rgb(224,62,62);
+	}
+	.block-color-gray_background {
+		background: rgb(235,236,237);
+	}
+	.block-color-brown_background {
+		background: rgb(233,229,227);
+	}
+	.block-color-orange_background {
+		background: rgb(250,235,221);
+	}
+	.block-color-yellow_background {
+		background: rgb(251,243,219);
+	}
+	.block-color-teal_background {
+		background: rgb(221,237,234);
+	}
+	.block-color-blue_background {
+		background: rgb(221,235,241);
+	}
+	.block-color-purple_background {
+		background: rgb(234,228,242);
+	}
+	.block-color-pink_background {
+		background: rgb(244,223,235);
+	}
+	.block-color-red_background {
+		background: rgb(251,228,228);
+	}
+	.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+	.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+	.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+	.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+	.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+	.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+	.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+	.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+	.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+	.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+	
+	.checkbox {
+		display: inline-flex;
+		vertical-align: text-bottom;
+		width: 16;
+		height: 16;
+		background-size: 16px;
+		margin-left: 2px;
+		margin-right: 5px;
+	}
+	
+	.checkbox-on {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+	}
+	
+	.checkbox-off {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+	}
+		
+	</style></head><body><article id="76643a7c-ab2b-48c5-93b8-990c8740cc2c" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/woodcuts_1.jpg" style="object-position:center 90%"/><h1 class="page-title">朱超逸</h1></header><div class="page-body"><blockquote id="707cd942-5344-49a9-8f6d-d27807299321" class="">努力前端er</blockquote><h1 id="95db232a-e59e-420d-af44-383cb1313f65" class="">基本信息</h1><p id="5ea6f4c9-e57d-4e8a-8f2e-daee692f7480" class="">手机：15651886138 </p><p id="fcca7f35-7e9e-4166-b3dd-7d532c13a83c" class="">邮箱：choeez@qq.com</p><p id="fb5015a9-f69a-4b7c-b5d8-fcd6e1b9ed8f" class="">学校：南京师范大学 </p><p id="2f9d299f-d6b5-4222-ae28-d1a3396964a9" class="">学历：本科 </p><p id="2b4423d9-ac3d-4e53-9a0c-8b966d00ba53" class="">毕业时间：2017.7</p><p id="41985452-eade-4d0e-b8cd-791ec44d1388" class="">工作经验：4年+</p><p id="ca44c995-9243-4fbb-a90a-b0633504d587" class="">github：<a href="https://github.com/zhucyi">https://github.com/zhucyi</a></p><hr id="b66c8f14-cc13-4963-ade8-ae7a81050ba9"/><h1 id="6bcaabd3-80d5-420c-a372-fb2099862930" class="">技能点</h1><p id="3cab06b2-8e55-4352-a7a4-c283e54aa553" class="">基本功 html/css/js，扎实</p><p id="19c1c34c-6b30-4670-a809-b60ade3ec5ab" class="">框架vue全家桶了解甚多，react使用频率不高，jquery、zepto老早用的不少，稀奇古怪的require、snap等入土框架也有涉及</p><p id="9c871af5-66a3-49b1-83de-565edefda492" class="">自动化构建webpack，还行</p><p id="7f271d33-7851-4641-86cd-a419e6b6f859" class="">服务端技术node&amp;java，有涉猎</p><hr id="1df6bf1a-51ca-4078-9d46-a8c97ad61fcd"/><h1 id="771d4bd6-b70b-49dc-8667-009ced7e6027" class="">工作与项目经历</h1><h2 id="5146ce19-1202-404e-9398-41b4e7b65892" class="">小米</h2><p id="2ff00196-ce72-4aec-81ef-d653ee260f0e" class="block-color-gray"><strong>前端工程师/团队负责人</strong><em>, 2018.12-至今</em></p><p id="c1de020f-f7dc-4831-a9d2-a91819842b97" class="">主导B端系统开发/重构，负责C端产品迭代（搜索结果 &amp; 搜索推荐 &amp; 浏览器搜索推荐）。作为负责人参与推动组内研发计划版本化，进行流程和人员管理。</p><h3 id="95afacf9-2f25-4956-90a0-def361183981" class="">重点参与项目：</h3><ul id="a32d12b0-8360-470f-b016-58af3c85520f" class="toggle"><li><details open=""><summary><strong>开放/实验平台(重构性B端系统)</strong></summary><p id="89c07889-2b67-40ba-8412-ef2f12316113" class="block-color-gray"><strong>技术栈：</strong>webpack+vue全家桶+typescript+elementUI</p><p id="c2629972-6522-453e-a1d9-25a3e7aa0d73" class=""><strong>描述：</strong>B端项目，主要为产品运营提供线上功能配置，业务功能和数据处理比较复杂。</p><p id="a929a7c6-271e-4252-9a45-ebc95b538938" class=""><strong>主要职责：</strong>提出并推进项目重构，确定重构方案，分期分模块对项目进行迁移，负责项目架构工作并完成了所有重构功能。</p></details></li></ul><ul id="d1869c9f-212a-4829-88ab-fa39a90aea27" class="toggle"><li><details open=""><summary><strong>部门组件库</strong></summary><p id="cb4eb143-d6ce-4177-a55d-87daae02ede5" class="block-color-gray"><strong>技术栈：</strong>vuecli3，jest，commitizen，typescript，ls-lint</p><p id="1bbf2e30-23ab-4fde-984c-df421e2da948" class=""><strong>描述：</strong>因为业务需要，c端多项目需要抽离公共组件和业务组件，主推进行部门项目组件库建设，参考elementUI进行开发。vuecli3搭建，接入jest单元测试。使用typescript，通过lint-stage配置ls-lint、prettier和tslint进行代码风格控制，使用scss mixin控制组件样式命名空间，移动端样式使用rem进行兼容。组件文档产出通过vuepress进行维护。</p><p id="c97043b8-806c-4cc9-b02a-fda7977183b2" class=""><strong>主要职责：</strong>确定组件库采用的框架和对应的引入方式，对公共基础组件进行抽象并放入组件库。</p></details></li></ul><ul id="11c785c6-d1da-4cae-ad16-cf09c4fa3744" class="toggle"><li><details open=""><summary><strong>c端项目(浏览器/全搜/信息流)</strong></summary><p id="70d46136-1131-45fc-9319-eab70532d47a" class="block-color-gray"><strong>技术栈：</strong>vuecli3，typescript，ls-lint，axios，intersection-observer</p><p id="0c528313-4adb-48c0-9b0b-29efb62f93a8" class=""><strong>描述：</strong>客户端内嵌h5项目，主要是搜索sug和结果页面，以卡片为粒度进行开发。通过JSBridge从客户端拉数据。建立了比较完整的半侵入式打点系统。曝光intersection-observer进行监控采样打点上报。组件内通过directive进行侵入式的绑定打点。</p><p id="1b322b4c-ab70-459d-ba48-6b74e27e7c7e" class=""><strong>主要职责：</strong>负责一系列卡片内容的研发并指导新人熟悉开发对应的功能模块，在项目中引入各种lint来完善项目规范。</p></details></li></ul><hr id="c92ba53f-be17-4f88-ae13-d3a339e116f8"/><h2 id="b258a5d0-a6b5-4b4e-88d9-510a41f89781" class="">苏宁</h2><p id="4b0867c3-88f0-43be-8347-38ec519601d1" class="block-color-gray"><strong>前端工程师</strong><em>, 2018.7-2018.11，5个月</em></p><p id="280f2090-ef46-4a8f-a614-720fac281696" class="">参与内部画像分析系统开发，后期带外聘人员负责c端云钻产品开发。</p><h3 id="3305b2bd-604b-4f10-ac7d-8668ad34ddf9" class="">重点参与项目：</h3><ul id="abcdb99b-24f8-4e06-bbbe-c235c1e23167" class="toggle"><li><details open=""><summary><strong>云钻系列(苏宁app个人信息中各种活动页面)</strong></summary><p id="a3eea8db-510b-4d4f-926c-8cfc636b02ec" class="block-color-gray"><strong>技术栈：</strong>webpack+art-template+zepto</p><p id="f413018c-397a-42a3-a63f-2f61de3dfb5e" class=""><strong>地址：</strong><a href="https://sign.suning.com/sign-web/m/newsign/to/index.do">https://sign.suning.com/sign-web/m/newsign/to/index.do</a></p><p id="4020ec36-1512-4b7a-b79b-7b476068a110" class=""><strong>描述：</strong>多种会员活动页面，旧项目居然同时使用jq和zepto，将jq进行剔除，完成新版需求开发。进行页面加载弱网情况优化。</p><p id="cf02cbbc-90b9-4d99-b149-f453c165b4db" class=""><strong>主要职责：</strong>负责项目需求的跟进、分工和开发，带领外聘同学合作开发项目。</p></details></li></ul><ul id="6bbc08c6-4a53-4464-9767-3e8f27c265fe" class="toggle"><li><details open=""><summary><strong>金矿项目(B端门店画像管理系统)</strong></summary><p id="8d466840-9b53-45c6-98ca-b2974d624b4d" class="block-color-gray"><strong>技术栈：</strong>webpack+vue全家桶+koa+echarts</p><p id="217ec26c-6223-464c-b762-23035dcfcb74" class=""><strong>描述：</strong>为制定门店发展方向而统计并展示每个苏宁门店的用户流量，消费金额等业务属性，vue-cli create的项目，伪ssr，koa直接写回的打包出的html，并充当中间层转发后台请求。</p><p id="88754724-2b44-4c05-a63d-4596e81b7f58" class=""><strong>主要职责：</strong>跟进版本需求，对接后台开发对应的功能模块。</p></details></li></ul><hr id="ee8dd554-2249-4c56-9a01-f41346db5cb5"/><h2 id="4dd1ce14-bb88-40f1-a110-0b768cdd3ad9" class="">华宇软件</h2><p id="d06660ff-7b17-4600-89df-e1e060e61a2d" class="block-color-gray"><strong>软件工程师</strong>(实习java,前端)<em>, 2016.11-2017.7-2018.6，1年8个月</em></p><p id="e3102248-e0bb-4221-b929-c0d656a987b0" class="">应届实习期参与前后端混合开发，毕业后负责前端项目开发工作，之后额外承担同批应届生项目计划制定与工作量评估与排期。</p><h3 id="8b11f21c-747a-46ae-9cbc-cff48ab64862" class="">重点参与项目：</h3><ul id="abfb222f-c193-4d8d-a385-44fb5c8a5ed4" class="toggle"><li><details open=""><summary><strong>江西执行管理(内网项目)</strong></summary><p id="7245a07d-5d57-4296-8705-bdbd8ea92d4a" class="block-color-gray"><strong>技术栈：</strong>require，vue，vue-router，snap，echarts</p><p id="186c56ed-9c61-4b6f-a57d-df2aa69c7845" class=""><strong>描述：</strong>采用require引入vue的完整包，渐进式开发。复杂组件间通信通过eventbus进行，用vue-router 的hash模式进行路由拆分。系统属于数据可视化类型，使用echarts进行各种图表配置。存在一些定制化地图+图表，使用snap进行手动绘制并控制交互。</p><p id="93529672-504e-488a-ab28-6118f4087f10" class=""><strong>主要职责：</strong>项目负责人，主导开发并首次引入vue以及相关生态包，探索对应的实践。</p></details></li></ul><ul id="ae11ece2-2559-46d8-a5bd-ccee04ca4a03" class="toggle"><li><details open=""><summary><strong>苏州政法协同(内网项目)</strong></summary><p id="d71de02e-1633-4194-8553-33090a92760a" class="block-color-gray"><strong>技术栈：</strong>jquery，require，snap</p><p id="af7411b2-db72-40cf-b21f-7f91da820465" class=""><strong>描述：</strong>采用AMD方式加载模块，jquery封装组件，页面手写，通过dom操作进行交互，页面结构通过拆分html进行区分。解决最多问题就是iframe之间通信（postMessage方式进行），iframe嵌入html后的滚动样式问题（100%撑满跟随视口变化）。</p><p id="caa8e162-e2f9-4e71-a8ea-4a4e097eaee5" class=""><strong>主要职责：</strong>独立完成项目的搭建，开发工作。</p><p id="0c4ed066-fc40-4fd7-b0a9-831ecb362b84" class="">
+	</p></details></li></ul><p id="2741f557-2145-4972-a1bb-d414473c6d7d" class="">
+	</p><p id="1d37dcbc-0f3c-4fd7-b84b-c3c57e58be27" class="">
+	</p></div></article></body></html>
