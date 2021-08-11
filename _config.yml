@@ -96,6 +96,12 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: jane
+# theme: edinburgh
+
+# Header
+menu:
+#   About: /about
+#   Contact: /contact
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
