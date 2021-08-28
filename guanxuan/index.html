@@ -1,0 +1,638 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>管璇</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a31f78ea-7bdb-4352-925e-b851b17dec26" class="page sans"><header><img class="page-cover-image" src="%E7%AE%A1%E7%92%87%20e07d2836b2224726969af5450fef96e0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210825170826.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="%E7%AE%A1%E7%92%87%20e07d2836b2224726969af5450fef96e0/%E8%AF%81%E4%BB%B6%E7%85%A7.jpg"/></div><h1 class="page-title">管璇</h1></header><div class="page-body"><blockquote id="27522661-3a97-4232-b02a-9ccb2793d4e0" class="">曾独立负责MIUI南京200人的行政工作，积极乐观善于沟通，具有良好的团队合作意识，熟练使用ps制作海报，会剪辑视频。</blockquote><h1 id="0988ae23-dacc-4ead-9f3f-b8286518da36" class="">☎️个人信息</h1><p id="782f4fc6-040d-42d4-8b83-59493f3d8844" class="">手机：18251958737</p><p id="82ca706f-8276-445c-ba1d-216d4fb09b02" class="">邮箱：1452745667@qq.com</p><p id="8d6a0d49-7074-435e-881c-1d51d8db4518" class="">学校：南京林业大学 </p><p id="68797284-eff5-4e07-8c67-f58045427f4a" class="">毕业时间：2019.07</p><p id="8abe7f5d-a439-479b-afb6-52baa01e366b" class="">工作经验：2年</p><hr id="88dad579-b16b-4a08-a047-c0f9a7e20670"/><h1 id="d8ff3ba5-4436-415f-8eef-cf92decc3109" class=""><strong>👩🏻‍💻</strong>工作内容</h1><h2 id="e5dd520c-3333-4c6c-84f7-d852693507f0" class="">小米</h2><p id="7106347f-5f6b-4d92-a717-456a0af941b5" class="block-color-gray">部门助理<em>, 2019.02-2021.04</em></p><ul id="22e101b6-31f9-4aed-b5e6-249befa60845" class="toggle"><li><details open=""><summary><strong>日常工作</strong></summary><ol type="1" id="fed181a1-8ff8-4391-986c-612bac38012b" class="numbered-list" start="1"><li>面试邀约及面试者接待。</li></ol><ol type="1" id="b25608a8-ff41-408a-9943-48228d272e53" class="numbered-list" start="2"><li>接新人入职，介绍公司及部门情况，带领其领资产，安排工位。</li></ol><ol type="1" id="e072d9b2-fcac-4a0a-afac-45ecd4600026" class="numbered-list" start="3"><li>计算各部门每月团建费，制作明细表。</li></ol><ol type="1" id="282dab01-a862-422e-95a4-b66428b6c054" class="numbered-list" start="4"><li>南京区域行政费用核对与结算，备用金管理及费用报销。</li></ol><ol type="1" id="54e6d09c-ac15-463d-920f-fcd62db888db" class="numbered-list" start="5"><li>部门同学的报销单检查及邮寄。</li></ol><ol type="1" id="63f05b29-65d7-42ce-af25-1a01451f7a8e" class="numbered-list" start="6"><li>库房物资管理。</li></ol><ol type="1" id="93aca2c5-6455-4926-b81b-0cd911f0ecb6" class="numbered-list" start="7"><li>大型会议组织策划及场地布置。</li></ol><ol type="1" id="fe9d2bf3-d9cb-4ad8-a8b7-321e81c0f9f4" class="numbered-list" start="8"><li>传达公司的消息通知。</li></ol></details></li></ul><ul id="6661936d-2547-43fa-a756-430f8c226bf5" class="toggle"><li><details open=""><summary><strong>团队文化建设</strong></summary><p id="600e27d4-aed3-4b64-821b-e2c8d618e0b6" class="">1、策划南京区域节日活动，购买活动所需物资及布置场地。</p><p id="6ab737eb-7582-4fb0-8386-7165e000e9a3" class="">2、团建策划。根据预算及人数策划团建方案，独立策划组织百人团建6次。</p><p id="b285ffa9-f46e-4dfb-88c5-175b6dfe7b9b" class="">3、年终 &amp; 年末总结会 &amp; MIUI庆功会。根据不同主题选择场地，准备相应物资，确认流程。</p></details></li></ul><ul id="856fdf20-593e-4511-a2ab-6f82505add24" class="toggle"><li><details open=""><summary><strong>业务支持</strong></summary><p id="aa7b4d3d-e008-48e9-beee-1a471d98aeae" class="">1、工位安排。确认每年部门总工位数和HC数，根据实际情况和业务需求，进行区域分布划分，制作工位表。</p><p id="d6c1462d-c2a9-4c88-a06a-31390079c2af" class="">2、转正员工述职答辩。提前确认参与答辩员工及评委，并邮件通知。准备场地及评分表，答辩结束后统计结果并公示。</p></details></li></ul><p id="5a731e39-59a5-41a9-bbfe-bcbf74f6bceb" class="">
+</p><hr id="1a27e322-a7b1-40a8-96a6-f4ee8806a551"/><h1 id="0475889e-4dbf-4824-ae36-34818274d092" class="">🧰活动经历</h1><h3 id="85bd7112-174d-4ed5-9f4a-30b387418f7d" class=""><strong>MIUI学院</strong></h3><p id="2d05f4e5-7024-4ab6-9586-2aa3f8bc383a" class=""><mark class="highlight-gray">2020.03-2020.10</mark></p><p id="ddbc6512-dd14-4ad8-a60c-25875d42d8ab" class="">MIUI学院是由行政牵头组织，面向部门内部同学开展的培训和技术交流活动。⾃MIUI学院正式开课以来， 担任了以下⼯作：</p><ol type="1" id="22efe2d9-e17f-4859-8c61-01237994f7c4" class="numbered-list" start="1"><li>宣传海报制作；</li></ol><ol type="1" id="4c3b6216-6e6d-45b6-8b14-8d5cdfce19a6" class="numbered-list" start="2"><li>课程预告宣传；</li></ol><ol type="1" id="038987f8-7a3c-43cb-acf9-16458e948d15" class="numbered-list" start="3"><li>搭建南京区域线上线下课程环境；</li></ol><ol type="1" id="c2d2a2c9-89ec-4535-bc91-d46bbe79e01a" class="numbered-list" start="4"><li>课程录制与存档；</li></ol><ol type="1" id="40c5ef64-654b-43aa-94f8-793edba87eee" class="numbered-list" start="5"><li>收集记录同学们的反馈建议。</li></ol><p id="b3431778-eb65-407b-84c6-5caed6b8c0c8" class="">MIUI学院开课期间，保证了每堂课按时⽆误的完成，给同学们提供了一个学习和交流的平台。</p><h3 id="8304ff3f-fa92-49ac-85aa-956850fc83be" class="">2020年中总结+团建</h3><p id="31fb2bb8-05d7-48eb-8b89-8f171c9a5947" class=""><mark class="highlight-gray">2020.06</mark></p><p id="cda6a872-5657-4a3c-9b5a-69f32eee8587" class="">受疫情影响，大家有半年未曾团建，于是趁着年中总结会时，组织了全部门两天一夜的团建。主要职责：</p><ol type="1" id="b63fe36e-6aad-419c-a097-6c6fe9349fce" class="numbered-list" start="1"><li>策划总结会流程，制定团建方案（未通过旅行社团购，自行组织）；</li></ol><ol type="1" id="a2972c29-9465-4397-926c-ade1a7e67ef4" class="numbered-list" start="2"><li>在南京及周边城市寻找能容纳200人开会以及食宿的场地；</li></ol><ol type="1" id="c37980de-a716-4b47-b8c1-2eb4c6f2a388" class="numbered-list" start="3"><li>根据预算将团建费用压到最低；</li></ol><ol type="1" id="6d4d806c-9767-4ecf-b06d-05836880561d" class="numbered-list" start="4"><li>根据会议/活动需要，对接供应商采买物资，二次加工。</li></ol><ol type="1" id="cfab8545-9429-4c2c-ba1b-98dc46e50e50" class="numbered-list" start="5"><li>团建涉及的项目/人员住宿安排；</li></ol><ol type="1" id="c8b3e23e-0011-4837-a811-0ff801b676c6" class="numbered-list" start="6"><li>现场照片拍摄汇总，后期宣介。</li></ol><hr id="7601ed35-d649-42f3-9ce4-72f9d88f5c78"/><h1 id="000f8a6a-e5a5-4ab4-bd4f-73c7fc8cebaa" class="">📜 作品</h1><div id="fcbf32d8-cad0-45cb-9a97-f94dc939cc66" class="column-list"><div id="e1c9fadd-5e78-49ef-9d61-775140761f67" style="width:50%" class="column"><figure id="e07d2836-b222-4726-969a-f5450fef96e0" class="image"><a href="%E7%AE%A1%E7%92%87%20e07d2836b2224726969af5450fef96e0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210825170840.jpg"><img style="width:336px" src="%E7%AE%A1%E7%92%87%20e07d2836b2224726969af5450fef96e0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210825170840.jpg"/></a></figure><figure id="1b8cb61c-611d-4065-9619-fffa6c0a6f34" class="image"><a href="%E7%AE%A1%E7%92%87%20e07d2836b2224726969af5450fef96e0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210825170922.jpg"><img style="width:1973px" src="%E7%AE%A1%E7%92%87%20e07d2836b2224726969af5450fef96e0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210825170922.jpg"/></a></figure></div><div id="2f5a2845-5ae8-4157-a6c6-161555d6aa97" style="width:50%" class="column"><figure id="b122f196-edba-48b4-803c-ec3ed386af50" class="image"><a href="%E7%AE%A1%E7%92%87%20e07d2836b2224726969af5450fef96e0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210825170853.jpg"><img style="width:288px" src="%E7%AE%A1%E7%92%87%20e07d2836b2224726969af5450fef96e0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210825170853.jpg"/></a></figure><figure id="29f73206-1dcc-4e3d-a154-671f9fbf1e45" class="image"><a href="%E7%AE%A1%E7%92%87%20e07d2836b2224726969af5450fef96e0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210825170835.jpg"><img style="width:384px" src="%E7%AE%A1%E7%92%87%20e07d2836b2224726969af5450fef96e0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210825170835.jpg"/></a></figure></div></div><p id="e28b7cfc-5494-4be5-9e04-03273e56ae3b" class="">
+</p></div></article></body></html>
